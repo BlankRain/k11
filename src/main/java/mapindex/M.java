@@ -19,6 +19,11 @@ public class M {
         dog3.id = "d3";
         dog3.name = "XD3";
 
+
+        Person laowang = new Person();
+        laowang.id = "p2";
+        laowang.name = "laowang";
+        laowang.dogName = "XD3";
         Index<Person, Dog> index = new Index<>(new IndexNodeFactory() {
             @Override
             public IndexNode makeIndexNode() {
@@ -29,7 +34,9 @@ public class M {
         index.addTarget(dog);
         index.addTarget(dog2);
         index.addTarget(dog3);
+        index.addSource(laowang);
 
         System.out.println(index);
+
     }
 }

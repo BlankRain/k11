@@ -47,4 +47,8 @@ public class Index<T, R> {
     public String toString() {
         return store.toString();
     }
+
+    public void toRdf() {
+
+    }
 }
